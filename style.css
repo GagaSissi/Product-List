@@ -1,0 +1,57 @@
+*,
+*::before,
+*:after html {
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  font-family: "Patrick Hand SC", cursive;
+}
+
+header {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Neucha", cursive;
+}
+
+section {
+  max-width: 75em;
+  border: 0.1em solid grey;
+  border-radius: 0.5em;
+  margin: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 12.5em;
+  margin: 0.2em;
+  border-radius: 0.5em;
+}
+
+span {
+  margin: 0.5em;
+}
+
+p {
+  margin: 0.5em;
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: 6.25em;
+  height: 2.5em;
+  margin: 1em;
+  transition: all 0.2s;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+}
