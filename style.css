@@ -20,26 +20,69 @@ h1 {
 }
 
 section {
-  max-width: 75em;
+  width: 85vw;
   border: 0.1em solid grey;
   border-radius: 0.5em;
   margin: 2em;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 50% 50%;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
 
 img {
-  max-width: 12.5em;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  max-width: 15vw;
   margin: 0.2em;
   border-radius: 0.5em;
 }
 
-span {
-  margin: 0.5em;
+h2 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin-left: 1em;
 }
 
-p {
-  margin: 0.5em;
+h3 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin-left: 1.3em;
+  margin-top: 3em;
+}
+
+.description {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.money {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.mwst {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin-top: 3em;
 }
 
 button {
@@ -49,6 +92,11 @@ button {
   height: 2.5em;
   margin: 1em;
   transition: all 0.2s;
+  grid-column-start: 3;
+
+  grid-row-start: 2;
+
+  margin-top: 3em;
 }
 
 button:hover {
