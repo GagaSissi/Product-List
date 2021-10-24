@@ -1,19 +1,49 @@
-// Create constant 1-3, product 1-3, one click.
-const product1Element = [];
-document.getElementById("btn1").addEventListener("click", addProduct1ToCart);
-const product2Element = [];
-document.getElementById("btn2").addEventListener("click", addProduct2ToCart);
-const product2Element = [];
-document.getElementById("btn3").addEventListener("click", addProduct3ToCart);
+const htmlLink = "http://localhost:3000/products";
 
-// class ProductDatas(){
-//     constructor(countProduct1, countProduct2, countProduct3) {
-//         this.produ1 = countProduct1
-//         this.produ2 = countProduct2
-//         this.produ3 = countProduct3
-//     }
-// }
+const buttonEins = document.getElementById("btn1");
+count = 0;
+buttonEins.onclick = function () {
+  count += 1;
+  buttonEins.innerText = "Add to cart " + count;
+};
 
-// function addProduct1ToCart() {
+// const buttonZwei = document.getElementById("btn2");
+// count = 0;
+// buttonZwei.onclick = function () {
+//   count += 1;
+//   buttonZwei.innerText = count;
+// };
 
-// }
+// const buttonDrei = document.getElementById("btn3");
+// count = 0;
+// buttonDrei.onclick = function () {
+//   count += 1;
+//   buttonDrei.innerText = count;
+// };
+
+init();
+
+function init() {
+  getProductData();
+  postProductData();
+}
+
+function getProductData() {
+  fetch(htmlLink)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
+}
+
+function postProductData() {
+  fetch(htmlLink, {
+    method: "POST",
+    body: JSON.stringify({
+      id: no,
+      title: someTitel,
+      manufactor: anyManu,
+      productdetail: someDetail,
+      cart: zeroCart,
+    }),
+  });
+}

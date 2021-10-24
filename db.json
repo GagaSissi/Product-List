@@ -1,19 +1,25 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "Product No.1",
+      "manufactor": "Manufacturer No.1",
+      "product detail": "lorem ipsum",
+      "cart": 0
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "Product No.2",
+      "manufactor": "Manufacturer No.2",
+      "product detail": "lorem ipsum",
+      "cart": 0
+    },
+    {
+      "id": 3,
+      "title": "Product No.3",
+      "manufactor": "Manufacturer No.3",
+      "product detail": "lorem ipsum",
+      "cart": 0
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
