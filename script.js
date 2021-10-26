@@ -1,31 +1,32 @@
 const htmlLink = "http://localhost:3000/products";
 
-const buttonEins = document.getElementById("btn1");
-count = 0;
-buttonEins.onclick = function () {
-  count += 1;
-  buttonEins.innerText = "Add to cart " + count;
-};
-
-// const buttonZwei = document.getElementById("btn2");
+// const buttonOne = document.getElementById("btn1");
 // count = 0;
-// buttonZwei.onclick = function () {
+// buttonOne.onclick = function countProductbuttonOne() {
 //   count += 1;
-//   buttonZwei.innerText = count;
+//   buttonOne.innerText = "Add to cart " + count;
 // };
 
-// const buttonDrei = document.getElementById("btn3");
+// const buttonTwo = document.getElementById("btn2");
 // count = 0;
-// buttonDrei.onclick = function () {
+// buttonTwo.onclick = function countProductbuttonTwo() {
 //   count += 1;
-//   buttonDrei.innerText = count;
+//   buttonTwo.innerText = "Add to cart " + count;
+// };
+
+// const buttonThree = document.getElementById("btn3");
+// count = 0;
+// buttonThree.onclick = function countProductbuttonThree() {
+//   count += 1;
+//   buttonThree.innerText = "Add to cart " + count;
 // };
 
 init();
 
 function init() {
   getProductData();
-  postProductData();
+  //postProductData();
+  //--> einbinden in funktion um nur dann zu posten, wenn btn gedrückt wird.
 }
 
 function getProductData() {
@@ -35,13 +36,13 @@ function getProductData() {
     .catch((error) => console.log("error", error));
 }
 
-function postProductData() {
+function postProductData(number, someTitel, theManu, someDetail, zeroCart) {
   fetch(htmlLink, {
     method: "POST",
     body: JSON.stringify({
-      id: no,
+      id: number,
       title: someTitel,
-      manufactor: anyManu,
+      manufactor: theManu,
       productdetail: someDetail,
       cart: zeroCart,
     }),
